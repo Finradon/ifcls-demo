@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: vscode-ifc-demo
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PASSWORD
+        sync: false
