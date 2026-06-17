@@ -10,9 +10,11 @@ ADD --checksum=sha256:${VSCODE_IFC_SHA256} --chown=coder:coder --chmod=0644 \
 
 USER coder
 
-RUN code-server --install-extension /tmp/vscode-ifc.vsix \
+RUN mkdir -p /home/coder/.local/share/code-server/User \
+    && code-server --install-extension /tmp/vscode-ifc.vsix \
     && rm /tmp/vscode-ifc.vsix
 
+COPY --chown=coder:coder repo-files/.vscode/settings.json /home/coder/.local/share/code-server/User/settings.json
 COPY --chown=coder:coder repo-files/ /home/coder/demo/
 
 EXPOSE 8080
