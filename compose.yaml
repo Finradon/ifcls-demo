@@ -1,0 +1,8 @@
+services:
+  vscode-ifc-demo:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PASSWORD: ${PASSWORD:?Set PASSWORD in your environment or a .env file}
+    restart: unless-stopped
