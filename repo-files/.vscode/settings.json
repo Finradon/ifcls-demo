@@ -9,6 +9,7 @@
   "security.workspace.trust.enabled": false,
   "telemetry.telemetryLevel": "off",
   "update.mode": "none",
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.startupEditor": "readme",
   "workbench.welcomePage.walkthroughs.openOnInstall": false
 }
